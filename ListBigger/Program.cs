@@ -25,7 +25,10 @@ namespace ListBigger
 
             SaveOrders(order, Directory.GetCurrentDirectory() + @"\Orders.txt");
             order.ShowList();
-           
+
+           // order.SortByBrand();
+           // order.ShowList();
+
             Console.WriteLine("\nTotale prijs: " + order.TotalPrice().ToString("C2"));
             Console.ReadKey();
 
