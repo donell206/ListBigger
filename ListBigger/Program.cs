@@ -22,7 +22,6 @@ namespace ListBigger
             order.AddItem(Factory.CreateBook("Hard Cover", "ASP.NET", 6.50));
             order.AddItem(Factory.CreateDvd("Movie", "Rush hours", 17.80));
 
-
             SaveOrders(order, Directory.GetCurrentDirectory() + @"\Orders.txt");
             order.ShowList();
 
