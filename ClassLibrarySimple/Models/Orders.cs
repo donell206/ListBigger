@@ -18,15 +18,14 @@ namespace ClassLibrarySimple.Models
             ItemId++;
         }
 
-        public void ShowByBrand(string brand)
-        {
-            var results = OrdresCollection.Where(x => x.Brand.ToUpper().Contains(brand.ToUpper())).ToList();
-            results.ForEach(x => Console.WriteLine(x));
-        }
 
         public void ShowList()
         {
             OrdresCollection.ForEach(i => Console.WriteLine(i));
+            //foreach (var item in OrdresCollection)
+            //{
+            //    Console.WriteLine(item);
+            //}
         }
 
         public void SortByBrand()
@@ -36,7 +35,7 @@ namespace ClassLibrarySimple.Models
 
         public double TotalPrice()
         {
-            return OrdresCollection.Sum(x => x.Price);
+           return OrdresCollection.Sum(x => x.Price);
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrarySimple.Models
 {
-    public class Items:IComparable<Items>
+    public abstract class Items:IComparable<Items>
     {
         public int ItemID { get; set; }
         public string  Brand { get; set; }

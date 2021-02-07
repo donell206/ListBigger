@@ -23,12 +23,12 @@ namespace ListBigger
             order.AddItem(Factory.CreateDvd("Movie", "Rush hours", 17.80));
 
             SaveOrders(order, Directory.GetCurrentDirectory() + @"\Orders.txt");
+
+            order.SortByBrand();
+
             order.ShowList();
 
-           // order.SortByBrand();
-           // order.ShowList();
-
-            Console.WriteLine("\nTotale prijs: " + order.TotalPrice().ToString("C2"));
+            Console.WriteLine("\nTotale prijs: " + order.TotalPrice());
             Console.ReadKey();
 
         }
