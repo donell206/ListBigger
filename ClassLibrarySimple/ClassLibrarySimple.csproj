@@ -45,6 +45,7 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Dvd.cs" />
     <Compile Include="Models\Items.cs" />
+    <Compile Include="Models\Logger.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\WriteData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

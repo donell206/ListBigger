@@ -2,6 +2,7 @@
 using ListBigger.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,8 @@ namespace ListBigger
 
             order.ShowList();
 
-            Console.WriteLine("\nTotale prijs: " + order.TotalPrice());
+            Console.WriteLine("\nTotale prijs: " + order.TotalPrice().ToString().PadLeft(59));
+
             Console.ReadKey();
 
         }
@@ -38,7 +40,7 @@ namespace ListBigger
             try
             {
                 WriteData.WriteListToFile(order.OrdresCollection, filename);
-                File.AppendAllText(filename, "Totale prijs: " + order.TotalPrice().ToString("C2"));
+                File.AppendAllText(filename, "Totale prijs: " + order.TotalPrice().ToString("0:C2"));
             }
             catch (Exception err)
             {

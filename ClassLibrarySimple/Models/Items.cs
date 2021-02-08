@@ -26,14 +26,14 @@ namespace ClassLibrarySimple.Models
             return Brand.CompareTo(other.Brand);
         }
 
-        public  string GetItemCode()
-        {
-            return (Brand.PadRight(3).Substring(0,3).ToUpper() + Name.PadRight(3).Substring(0,3).ToUpper());
-        }
+        //public  string GetItemCode()
+        //{
+        //    return (Brand.PadRight(3).Substring(0,3).ToUpper() + Name.PadRight(3).Substring(0,3).ToUpper());
+        //}
 
         public override string ToString()
         {
-            return $"{ItemID} Brand: {Brand.PadRight(20)} Name: {Name.PadRight(20)} Price: {Price.ToString("N2").PadRight(10)} Code: {GetItemCode().PadRight(15)}";
+            return $"{ItemID} Brand: {Brand.PadRight(20)} Name: {Name.PadRight(20)} Price: {Price.ToString("N2").PadLeft(10)} ";
         }
 
        
